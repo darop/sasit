@@ -1,0 +1,511 @@
+/* === General Section === */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+html, body, textarea, input { 
+	font-size:101%;
+	font-family:Helvetica,Arial,verdana,arial,sans-serif;
+	color:#8F8F8F;
+	font-size:12px;
+	-webkit-text-size-adjust:none;
+}
+html{
+	background:url(../img/bg.jpg) no-repeat center 385px #E0E0E0;
+}
+body{
+}
+a{ color:#58ADCC; text-decoration:none; cursor:pointer; }
+a:hover { text-decoration:none }
+a:hover { background:#58ADCC; color:#383838;}
+::-moz-selection{ background:#58ADCC; color:#383838; }
+::selection { background:#58ADCC; color:#383838; }
+footer, header, section {
+	display:block;
+}
+h1{
+	color:#CCCCCC;
+	font-size:48px;
+	letter-spacing:-0.03em;
+	font-weight:100;
+	z-index:400;
+	position:relative;
+}
+h2{
+	font-size:28px;
+	letter-spacing:-0.01em;
+	margin-bottom:16px;
+	margin-top:3px;
+}
+h3{
+	font-size:18px;
+	margin:8px 0 10px;
+}
+h4{
+	font-size:18px;
+	margin:8px 0 0;
+}
+
+p, li{
+	line-height:1.5em;
+}
+p, ul{
+	margin-bottom:18px;
+}
+li{
+	list-style:inside square;
+	margin-left:2px;
+}
+
+hr { 
+	display:block;
+	height:0px;
+	line-height:0px;
+	border:0;
+	border-top:1px solid #222222;
+	border-bottom:1px solid #444444;
+	margin:16px 0;
+	padding:0;
+}
+strong{
+	font-weight:700;
+}
+header, footer, nav, section{
+	display:block;
+}
+footer{
+	font-size:10px;
+	text-align:center;
+}
+#wrap{
+	width:800px;
+	min-height:400px;
+	margin:0px auto;
+	margin-top:80px;
+	background:url(../img/bg.gif) #333333;
+}
+#content{
+	position:relative;
+	top:39px;
+	width:500px;
+	height:350px;
+	margin-left:250px;
+}
+img{
+	border:0;
+}
+noscript{
+	display:block;
+	position:absolute;
+	top:238px;
+	margin:0 auto;
+	width:800px;
+	bottom:0;
+	z-index:20;
+}
+noscript p{
+	width:800px;
+	font-size:20px;
+	padding-top:20px;
+	margin:0 auto;
+	color:#4D4D4D;
+}
+input:invalid{
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.small{
+	font-size:10px;
+	color:#888;
+	letter-spacing:0;
+}
+nav{
+	width:200px;
+	float:left;
+	position:relative;
+	background:url(../img/shine.gif) no-repeat left top;
+}
+nav ul{
+	border-top:1px solid #222222;
+	border-bottom:1px solid #444444;
+	font-size:14px;
+	font-weight:700;
+}
+nav ul li{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+nav ul a{
+	border-top:1px solid #444444;
+	border-bottom:1px solid #222222;
+	display:block;
+	padding:6px 15px 7px 0;
+	text-align:right;
+	-webkit-text-shadow: -1px -1px 0px #222222, 1px 1px 0px #444444;
+	-moz-text-shadow: -1px -1px 0px #222222, 1px 1px 0px #444444;
+	text-shadow: -1px -1px 0px #222222, 1px 1px 0px #444444;
+	color:#CCCCCC;
+}
+nav ul li a:hover, nav ul li a.active{
+	border-top:1px solid #BBB;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+	text-shadow: none;
+	background:url(../img/nav_bg.png) center repeat-x #58ADCC;
+	text-decoration:none;
+	color:#383838;
+}
+
+#shadow{
+	background:url(../img/shadow.png) no-repeat;
+	height:400px;
+	width:10px;
+	position:absolute;
+	right:0;
+	top:0;
+	border-right:1px solid #333333;
+}
+#logo{
+	display:block;
+	height:160px;
+	text-indent:-9999px;
+	background:url(../img/logo.png) no-repeat center;
+	
+}
+.slide{
+	height:250px;
+	width:500px;
+	display:none;
+	position:absolute;
+	left:0;
+}
+.slide h2, .slide h3, .slide h4, .slide h5{
+	background:url(../img/bg.gif) #333333;
+}
+/* === Countdown Section === */
+
+
+#countdown{
+	visibility:hidden;
+	width:600px;
+}
+#countdown span{
+	height:45px;
+	line-height:37px;
+	font-size:13px;
+}
+#countdown span .letter{
+	background:url(../img/letters.png) no-repeat 0px 0px;
+	height:60px;
+	padding:34px 14px 10px 13px;
+	padding:34px 0px 10px 12px;
+	margin:0;
+}
+#countdown span span.c.i_1{background-position:0 0}
+#countdown span span.c.i_2{background-position:-33px 0;}
+#countdown span span.c.i_3{background-position:-66px 0;}
+#countdown span span.c.i_4{background-position:-99px 0;}
+#countdown span span.c.i_5{background-position:-132px 0;}
+#countdown span span.c.i_6{background-position:-165px 0;}
+#countdown span span.c.i_7{background-position:-198px 0;}
+#countdown span span.c.i_8{background-position:-231px 0;}
+#countdown span span.c.i_9{background-position:-264px 0;}
+#countdown span span.c.i_0{background-position:-297px 0;}
+
+/* === Progress Section === */
+
+
+#progess{
+	width:392px;
+	height:35px;
+	background:url(../img/inputfield.gif) top left no-repeat;
+	padding-top:1px;
+}
+
+#progessbar,#progessbarbox{
+	height:35px;
+	text-align:left;
+}
+#progessbar{
+	height:24px;
+	padding-right:-40px;
+	background:url(../img/nav_bg.png) center;
+	background-repeat:repeat-x;
+	background-color:#999999;
+	width:0%;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+#progessbarbox{
+	margin:4px;
+	width:370px;
+	overflow:hidden;
+}
+#percent{
+	float:right;
+	position:relative;
+	text-align:center;
+	font-size:14px;
+	font-weight:700;
+	width:70px;
+	height:30px;
+	overflow:hidden;
+	top:4px;
+	right:-14px;
+	padding:0;
+	color:#383838;
+}
+
+/* === Email Section === */
+
+#emailform{
+	text-align:left;
+	width:392px;
+	display:block;
+	height:45px;
+	background:url(../img/inputfield.gif) center left no-repeat;
+}
+#emailfield{
+	width:285px;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	height:45px;
+	float:left;
+}
+#emailfield input{
+	border:0;
+	background:none;
+	font-size:14px;
+	font-weight:700;
+	color:#CCCCCC;
+	width:280px;
+	padding:0 5px;
+	outline: none;
+	margin-top:14px;
+}
+#submitfield{
+	float:right;
+	width:93px;
+	height:31px;
+}
+
+#submitbutton{
+	font-size:14px;
+	font-weight:700;
+	color:#CCCCCC;
+	width:77px;
+	height:26px;
+	border:0;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	background:url(../img/nav_bg.png) center left repeat-x #58ADCC;
+	cursor: pointer;
+	margin-top:10px;
+	-webkit-text-shadow: 1px 1px 0px #444444;
+	-moz-text-shadow: 1px 1px 0px #444444;
+	text-shadow: 1px 1px 0px #444444;
+}
+#submitbutton:hover, #submitbutton:active{
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+	text-shadow: none;
+	color:#383838;
+	background-color:#58ADCC !important;
+}
+
+
+
+/* === Contact Section === */
+
+#namelabel, #emaillabel{
+	text-align:left;
+	width:392px;
+	display:block;
+	height:36px;
+	background:url(../img/inputfield.gif) top left no-repeat;
+}
+#name, #contactemail{
+	border:0;
+	background:none;
+	font-size:14px;
+	font-weight:700;
+	color:#CCCCCC;
+	width:370px;
+	padding:0 5px;
+	outline: none;
+	margin-top:8px;
+
+}
+#contactsubmit{
+	font-size:14px;
+	font-weight:700;
+	color:#CCCCCC;
+	width:77px;
+	height:26px;
+	border:0;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	background:url(../img/nav_bg.png) center left repeat-x #58ADCC;
+	cursor: pointer;
+	-webkit-text-shadow: 1px 1px 0px #444444;
+	-moz-text-shadow: 1px 1px 0px #444444;
+	text-shadow: 1px 1px 0px #444444;
+}
+#contactsubmit:hover, #contactsubmit:active{
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+	text-shadow: none;
+	color:#383838;
+	background-color:#58ADCC !important;
+}
+#contactstatus{
+	font-size:12px;
+	padding-left:12px;
+	color:#58ADCC;
+	-webkit-text-shadow: 1px 1px 0px #222222;
+	-moz-text-shadow: 1px 1px 0px #222222;
+	text-shadow: 1px 1px 0px #222222;
+}
+
+#msglabel{
+	text-align:left;
+	width:392px;
+	display:block;
+	background:url(../img/textfield.gif) top left no-repeat;
+}
+textarea{
+	border:1px solid;
+	padding:0 5px;
+	font-size:14px;
+	font-weight:700;
+	color:#CCCCCC;
+	width:370px;
+	height:86px;
+	resize:none;
+	border:0;
+	background:none;
+	overflow:auto;
+	margin-top:8px;
+	margin-bottom:9px;
+	outline:none;
+}
+
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane{
+	position: absolute;
+}
+
+.jspVerticalBar{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 6px;
+	height: 100%;
+	background: #CCCCCC;
+	border-top:1px solid #222222;
+	border-left:1px solid #222222;
+	border-right:1px solid #444444;
+	border-bottom:1px solid #444444;
+}
+
+.jspHorizontalBar{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	width: 6px;
+	background: #CCCCCC;
+	border-top:1px solid #222222;
+	border-left:1px solid #222222;
+	border-right:1px solid #444444;
+	border-bottom:1px solid #444444;
+}
+.jspVerticalBar *,
+.jspHorizontalBar *{
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap{
+	float: left;
+}
+
+.jspTrack{
+	background: #444444;
+	position: relative;
+}
+
+.jspDrag{
+	background: #58ADCC;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow{
+	background: #222;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow{
+	height: 16px;
+}
+.jspHorizontalBar .jspArrow{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus{
+	outline: none;
+}
+
+.jspCorner{
+	background: #222;
+	float: left;
+	height: 100%;
+}
